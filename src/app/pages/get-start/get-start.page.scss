@@ -1,0 +1,35 @@
+.container{
+    background: linear-gradient(#7D0A0A, #BF3131);
+    height: 100%;
+}
+.imAC{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    
+}
+.imAC img{
+   margin-top: 100px;
+   height: 300px;
+   width: 300px;
+}
+.slogan{
+    margin-top: 40px;
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+.slogan h1{
+    font-size: 2.4em;
+}
+.button{
+    margin: auto;
+    width: 270px;
+    color: blue;
+}
+
+.connecter{
+    text-align: center;
+    color: white;
+    margin-top: 150px;
+}

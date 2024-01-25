@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "fam-traiteur": {
+      "hosting": {
+        "app": [
+          "fam-traiteur"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "fam-traiteur"
+  }
+}

@@ -1,0 +1,43 @@
+ion-toolbar{
+    --background: #7D0A0A;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+}
+.logo ion-icon{
+    margin-top: 20px;
+    height: 200px;
+    width: 200px;
+    color: #7D0A0A;
+    margin-bottom: 20px;
+}
+ion-list{
+    margin: auto;
+    border-top:10px solid #7D0A0A;
+    padding-top: 20px;
+    border-radius: 40px 40px 0% 0px;
+}
+ion-input{
+    color: #7D0A0A;
+}
+.buton1{
+    margin: auto;
+    margin-top: 30px;
+    width: 330px;
+    
+}
+.buton1 ion-button{
+    --background: #7D0A0A;
+    --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.buton2{
+    margin: auto;
+    margin-top: 15px;
+    width: 330px;
+    
+}
+.buton2 ion-button{
+    --background: #7D0A0A;
+    --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}

@@ -1,20 +1,63 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-buttons slot="start" >
+      <ion-button>
+        <ion-button>
+          <img style="width: 40px;height: 20px;object-fit: cover;" src="./assets/images/FAM_rouge.png" alt="">
+        </ion-button>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <a [routerLink]="['/sign-up']"><ion-button color="light"><img style="width: 40px;height: 40px;object-fit: cover;border-radius: 50px;" src="./assets/images/dior.jpg" alt=""></ion-button></a>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
+  <ion-searchbar style="margin-top: 5px;"></ion-searchbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="menu1">
+    <div class="burger">
+      <a href=""><img src="./assets/images/burger.png" alt=""></a>
+      <p>Burger</p>
+    </div>
+    <div class="pizza">
+      <a href=""><img src="./assets/images/pizza.png" alt=""></a>
+      <p>Pizza</p>
+    </div>
+    <div class="dessert">
+      <a href=""><img src="./assets/images/dessert.png" alt=""></a>
+      <p>Dessert</p>
+    </div>
+    <div class="dessert">
+      <a href=""><img src="./assets/images/dessert.png" alt=""></a>
+      <p>Dessert</p>
+    </div>
+  </div>
+  <div class="promo" style="display: block;justify-content: center;margin:20px;">
+    <h3 style="font-weight: bolder; top: 1Opx; position: absolute;">Promotions</h3><br>
+    <div class="impro" style="margin-top: 0px;padding: O;">
+      <a href=""><img src="./assets/images/prom.png" alt=""></a>
+    </div>
+  </div>
+  <div class="promo" style="display: block;justify-content: center;margin:20px;">
+    <h3 style="font-weight: bolder; top: 1Opx; position: absolute;">Populaire</h3><br>
+    <div class="impro" style="display: flex;justify-content: space-around;margin-top: 32px;">
+      <a href=""><img src="./assets/images/pop1.png" alt=""></a><br>
+      <a href=""><img src="./assets/images/pop2.png" alt=""></a>
+    </div>
+    <div class="impro" style="display: flex;justify-content: space-around;margin-top: 32px;">
+      <a href=""><img src="./assets/images/pop1.png" alt=""></a><br>
+      <a href=""><img src="./assets/images/pop2.png" alt=""></a>
+    </div>
   </div>
 </ion-content>
+<ion-footer>
+   <div class="footer">
+     <a href="#"><ion-icon style="width: 32px;height: 32px;" name="home-outline"></ion-icon></a>
+     <a href=""><ion-icon style="width: 32px;height: 32px;" name="search-outline"></ion-icon></a>
+     <a href=""><ion-icon style="width: 32px;height: 32px;" name="add-circle-outline"></ion-icon></a>
+     <a href=""><ion-icon style="width: 32px;height: 32px;" name="location-outline"></ion-icon></a>
+   </div>
+</ion-footer>
