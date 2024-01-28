@@ -1,17 +1,12 @@
 ion-toolbar{
     --background: white;
-    --margin:20px;
+    
 }
-ion-searchbar{
-    margin-left: 13px;
-    width: 365px;
-}
+
 .menu1{
     display: flex;
     justify-content: space-around;
     text-align: center;
-    margin: 20px;
-    margin-top: 15px;
     color: #858585;
 }
 
@@ -21,7 +16,7 @@ ion-searchbar{
 }
 p{
     padding: 0;
-    margin: 5px;
+    
 }
 ion-footer{
     background:#ffffffe0;
@@ -31,6 +26,7 @@ ion-footer{
     display: flex;
     justify-content: space-between;
     margin: 30px;
+    
 }
 .footer a{
     text-decoration: none;

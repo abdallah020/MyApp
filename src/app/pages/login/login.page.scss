@@ -5,12 +5,14 @@ ion-toolbar{
     display: flex;
     justify-content: center;
 }
-.logo ion-icon{
+.logo img{
     margin-top: 20px;
     height: 200px;
     width: 200px;
     color: #7D0A0A;
     margin-bottom: 20px;
+    border: 5px solid #7D0A0A;
+    border-radius: 50%;
 }
 ion-list{
     margin: auto;
