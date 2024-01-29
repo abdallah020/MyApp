@@ -18,28 +18,31 @@
 
 <ion-content [fullscreen]="true" class="ion-padding">
   <div class="menu1">
-    <div class="burger">
-      <a href=""><img src="./assets/images/burger.png" alt=""></a>
-      <p>Burger</p>
-    </div>
-    <div class="pizza">
-      <a href=""><img src="./assets/images/pizza.png" alt=""></a>
-      <p>Pizza</p>
-    </div>
-    <div class="dessert">
-      <a href=""><img src="./assets/images/dessert.png" alt=""></a>
-      <p>Dessert</p>
-    </div>
-    <div class="dessert">
-      <a href=""><img src="./assets/images/dessert.png" alt=""></a>
-      <p>Dessert</p>
-    </div>
+    <ion-item-sliding class="burger" *ngFor="let categorie of categories">
+      <ion-item>
+        <!-- Contenu masqué par défaut -->
+        <ion-label>  
+          <h2>{{ categorie.title }}</h2>
+          <p>{{ categorie.description }}</p>
+          
+        </ion-label>
+      </ion-item>
+
+      <ion-item-options>
+        <!-- Contenu affiché lorsque l'utilisateur fait glisser -->
+        <a href=""><img style="width: 45px;height: 45px;object-fit: cover;" src="./assets/images/burger.png" alt=""></a>
+        <!-- <h2>{{ categorie.title }}</h2>
+        <p>{{ categorie.description }}</p> -->
+      </ion-item-options>
+    </ion-item-sliding> 
   </div>
-  <div class="promo" style="display: block;justify-content: center;margin:10px;">
+  <div class="promo" style="display: block;justify-content: center;margin:10px;" *ngFor="let produit of produits">
     <h3 style="font-weight: bolder; top: 1Opx; position: absolute;">Promotions</h3><br>
     <div class="impro" style="margin-top: 0px;padding: O;">
       <a href=""><img src="./assets/images/prom.png" alt=""></a>
     </div>
+    <h2>{{ produit.title }}</h2>
+    <p>{{ produit.description }}</p>
   </div>
   <div class="promo" style="display: block;justify-content: center;margin:10px;">
     <h3 style="font-weight: bolder; top: 1Opx; position: absolute;">Populaire</h3><br>

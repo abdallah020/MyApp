@@ -17,6 +17,8 @@ export class ProduitsPage implements OnInit,OnDestroy {
   produit: produits[] =[];
   isOpen: boolean = false;
 
+  image: any;
+
   constructor(private produits: ProduitsService) { }
 
   ngOnInit(): void {
