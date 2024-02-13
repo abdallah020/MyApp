@@ -1,0 +1,38 @@
+<!-- C'est la page D'Accueil -->
+<ion-header class="accueil">
+  <img src="./assets/images/bouffe.jpeg" alt="">
+  <div class="menu">
+      <h2><a [routerLink]="['/home']"><ion-icon name="arrow-back-outline"></ion-icon></a></h2>
+      <h3 class="profil"><a [routerLink]="['/login']"><ion-icon name="person-circle-outline"></ion-icon></a></h3>
+  </div>
+      <h1>Nos produits <br>disponible</h1>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+<div >
+  <h2 class="prodAC">Mes produits</h2>
+  <div class="produit" *ngFor="let produit of produits">
+    <div *ngIf="produit.title || produit.description || produit.image">
+      <h3>{{ produit.title }}</h3>
+      <h4><ion-icon name="heart"></ion-icon></h4>
+      <img [src]="produit.image" alt="{{ produit.title }}">
+      <p>{{ produit.description }}</p>
+      <h2><ion-icon name="add-circle"></ion-icon></h2>
+    </div>
+  </div>
+</div>
+
+</ion-content>   
+<ion-footer [translucent]="true">
+<div class="footer">
+  <ion-item [routerLink]="['/home']" [class.active]="activeButton === 'home'" (click)="setActiveButton('home')">
+    <ion-icon name="home-outline"></ion-icon>
+  </ion-item>
+  <ion-item [routerLink]="['/contact']" [class.active]="activeButton === 'location'" (click)="setActiveButton('location')">
+    <ion-icon name="call-outline"></ion-icon>
+  </ion-item>
+  <ion-item [routerLink]="['/your-search-route']" [class.active]="activeButton === 'search'" (click)="setActiveButton('search')">
+    <ion-icon name="restaurant-outline"></ion-icon>
+  </ion-item>
+</div>
+</ion-footer>

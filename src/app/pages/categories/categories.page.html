@@ -6,7 +6,7 @@
       </ion-button>
     </ion-buttons>
     <ion-title>
-      Categories
+      Catégories
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -21,12 +21,13 @@
         <ion-item-option color="danger" (click)="deleteCategories(item)">DELETE</ion-item-option>
       </ion-item-options>
 
-      <ion-item>
+      <ion-item *ngIf="item.title || item.description || item.image">
         <ion-label>
-          {{item?.title}}
+          <img style="width: 45px;height: 45px;object-fit: cover;" *ngIf="item.image" [src]="item.image" />
+          {{ item.title }}
           <p>
             <ion-text class="ion-text-wrap">
-              {{item?.description}}
+              {{ item.description }}
             </ion-text>
           </p>
         </ion-label>
@@ -46,7 +47,7 @@
               <ion-icon name="arrow-back-outline"></ion-icon>
             </ion-button>
           </ion-buttons>
-          <ion-title>Add A Note</ion-title>
+          <ion-title>Ajouter une catégorie</ion-title>
           <ion-buttons slot="end">
             <ion-button (click)="save(f)">
               <ion-icon slot="end" name="checkmark-outline"></ion-icon>

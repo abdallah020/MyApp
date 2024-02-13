@@ -7,6 +7,7 @@ import { v4 as uuidv4 } from 'uuid';
 export interface categories {
   title:string, 
   description:string,
+  image:string,
   id?: string,
 }
 
@@ -25,11 +26,22 @@ export class CategoriesService {
   ) { }
 
   async addCategories(data: categories){
+    if (data.title.trim() === '' || data.description.trim() === '' || data.image.trim() === '') {
+      throw new Error('Veuillez remplir tous les champs');
+    }
     try{
       const dataRef: any = collection(this.firestore, 'categories');
       const response = await addDoc(dataRef, data);
       console.log(response);
       const id = await response?.id;
+
+      // Mettez à jour l'image dans le même document avec le même ID
+      await this.updateCategories(id, {
+        title: '',
+        description: '',
+        image: data.image,
+      });
+
       const currentCategories = this._categories.value;
       const categoryId = uuidv4(); // Utilisation de uuidv4 pour générer un id unique
       const categorie: categories = { ...data, id };
@@ -55,6 +67,7 @@ export class CategoriesService {
       return categorie;
 
     }catch(e){
+      console.error('Une erreur s\'est produite lors de la récupération des catégories :', e);
       throw(e);
     }
   }

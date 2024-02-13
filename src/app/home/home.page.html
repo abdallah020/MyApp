@@ -1,67 +1,54 @@
-<ion-header [translucent]="true" class="ion-padding">
-  <ion-toolbar>
-    <ion-buttons slot="start" >
-      <ion-button>
-        <ion-button>
-          <img style="width: 80px;height: 40px;object-fit: cover;" src="./assets/images/FAM_rouge.png" alt="">
-        </ion-button>
-      </ion-button>
-    </ion-buttons>
-    <ion-buttons slot="end">
-      <ion-button>
-        <a [routerLink]="['/sign-up']"><ion-button color="light"><img style="width: 40px;height: 40px;object-fit: cover;border-radius: 50px;" src="./assets/images/dior.jpg" alt=""></ion-button></a>
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-  <ion-searchbar style="margin-top: 5px;"></ion-searchbar>
+<!-- C'est la page D'Accueil -->
+<ion-header class="accueil">
+    <img src="./assets/images/tab.jpg" alt="">
+    <div class="menu">
+        <h2><a [routerLink]="['/get-start']"><ion-icon name="arrow-back-outline"></ion-icon></a></h2>
+        <h3 class="profil"><a [routerLink]="['/login']"><ion-icon name="person-circle-outline"></ion-icon></a></h3>
+    </div>
+    <h1>Meilleur <br>Service Traiteur</h1>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
+  <h2 class="Contenu">Categories</h2>
+  <p class="Contenu1"><a [routerLink]="['/list-categories']">Voir plus</a></p>
   <div class="menu1">
-    <ion-item-sliding class="burger" *ngFor="let categorie of categories">
-      <ion-item>
-        <!-- Contenu masqué par défaut -->
-        <ion-label>  
+    <div class="burger" *ngFor="let categorie of categories">
+      <div *ngIf="categorie.title || categorie.description || categorie.image">
+        <a href=""><img [src]="categorie.image" alt=""></a>
+        <div class="cateText">
           <h2>{{ categorie.title }}</h2>
           <p>{{ categorie.description }}</p>
-          
-        </ion-label>
-      </ion-item>
+        </div>
+      </div>
+    </div>
+  </div>
 
-      <ion-item-options>
-        <!-- Contenu affiché lorsque l'utilisateur fait glisser -->
-        <a href=""><img style="width: 45px;height: 45px;object-fit: cover;" src="./assets/images/burger.png" alt=""></a>
-        <!-- <h2>{{ categorie.title }}</h2>
-        <p>{{ categorie.description }}</p> -->
-      </ion-item-options>
-    </ion-item-sliding> 
-  </div>
-  <div class="promo" style="display: block;justify-content: center;margin:10px;" *ngFor="let produit of produits">
-    <h3 style="font-weight: bolder; top: 1Opx; position: absolute;">Promotions</h3><br>
-    <div class="impro" style="margin-top: 0px;padding: O;">
-      <a href=""><img src="./assets/images/prom.png" alt=""></a>
-    </div>
-    <h2>{{ produit.title }}</h2>
-    <p>{{ produit.description }}</p>
-  </div>
-  <div class="promo" style="display: block;justify-content: center;margin:10px;">
-    <h3 style="font-weight: bolder; top: 1Opx; position: absolute;">Populaire</h3><br>
-    <div class="impro" style="display: flex;justify-content: space-around;margin-top: 32px;">
-      <a href=""><img src="./assets/images/pop1.png" alt=""></a><br>
-      <a href=""><img src="./assets/images/pop2.png" alt=""></a>
-    </div>
-    <div class="impro" style="display: flex;justify-content: space-around;margin-top: 32px;">
-      <a href=""><img src="./assets/images/pop1.png" alt=""></a><br>
-      <a href=""><img src="./assets/images/pop2.png" alt=""></a>
+
+  <div >
+    <h2 class="prodAC">Mes produits</h2>
+    <p class="prodAC1"><a [routerLink]="['/list-produits']">Voir plus</a></p>
+    <div class="produit" *ngFor="let produit of produits">
+      <div *ngIf="produit.title || produit.description || produit.image">
+        <h3>{{ produit.title }}</h3>
+        <h4><ion-icon name="heart"></ion-icon></h4>
+        <img [src]="produit.image" alt="{{ produit.title }}">
+        <p>{{ produit.description }}</p>
+        <h2><ion-icon name="add-circle"></ion-icon></h2>
+      </div>
     </div>
   </div>
-  
-</ion-content>
-<ion-footer>
-   <div class="footer">
-     <a href="#"><ion-icon style="width: 32px;height: 32px;" name="home-outline"></ion-icon></a>
-     <a href=""><ion-icon style="width: 32px;height: 32px;" name="search-outline"></ion-icon></a>
-     <a href=""><ion-icon style="width: 32px;height: 32px;" name="add-circle-outline"></ion-icon></a>
-     <a href=""><ion-icon style="width: 32px;height: 32px;" name="location-outline"></ion-icon></a>
-   </div>
+
+</ion-content>   
+<ion-footer [translucent]="true">
+  <div class="footer">
+    <ion-item [routerLink]="['/home']" [class.active]="activeButton === 'home'" (click)="setActiveButton('home')">
+      <ion-icon name="home-outline"></ion-icon>
+    </ion-item>
+    <ion-item [routerLink]="['/contact']" [class.active]="activeButton === 'location'" (click)="setActiveButton('location')">
+      <ion-icon name="call-outline"></ion-icon>
+    </ion-item>
+    <ion-item [routerLink]="['/your-search-route']" [class.active]="activeButton === 'search'" (click)="setActiveButton('search')">
+      <ion-icon name="restaurant-outline"></ion-icon>
+    </ion-item>
+  </div>
 </ion-footer>

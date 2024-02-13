@@ -14,14 +14,20 @@ export class HomePage implements OnInit, OnDestroy {
   categories: categories[] = [];
   categoriesSub: Subscription = new Subscription;
 
+  activeButton: string | null = null;
+
   constructor(private produitsService: ProduitsService, private categoriesService: CategoriesService) {}
+
+  setActiveButton(button: string) {
+    this.activeButton = button;
+  }
 
   ngOnInit() {
     this.loadProduits();
     // Souscrire à l'observable pour recevoir les mises à jour automatiques
     this.produitsSub = this.produitsService.produits.subscribe({
       next: (produits: produits[]) => {
-        this.produits = produits; // Mettez à jour la liste de produits à chaque mise à jour du service
+        this.produits = produits.slice(-5).reverse(); // Mettez à jour la liste de produits à chaque mise à jour du service
       },
       error: (e: any) => {
         console.log(e);
@@ -47,9 +53,13 @@ export class HomePage implements OnInit, OnDestroy {
 
   async loadProduits() {
     try {
+      console.log('Avant chargement des produits');
       this.produits = await this.produitsService.getProduits();
+      console.log('Après chargement des produits', this.produits);
+      this.produits = this.produits.slice(-5).reverse();
+      console.log('produits après ajustement', this.produits);
     } catch (e) {
-      console.error(e);
+      console.error('Une erreur s\'est produite lors du chargement des produits :', e);
     }
   }
   async loadCategories() {
@@ -60,7 +70,7 @@ export class HomePage implements OnInit, OnDestroy {
       this.categories = this.categories.slice(-4).reverse();
       console.log('Catégories après ajustement', this.categories);
     } catch (e) {
-      console.error(e);
+      console.error('Une erreur s\'est produite lors du chargement des catégories :', e);
     }
   }
   

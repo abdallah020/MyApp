@@ -67,9 +67,11 @@
 // Css Pour les catégories
 .Contenu{
     margin-top: 5px;
+    text-align: center;
     color: #7D0A0A;
-    font-size: 1.3em;
+    font-size: 2em;
     font-family: 'Poppins', sans-serif;
+    text-decoration: underline;
 }
 .Contenu1{
     width: 92%;
@@ -128,90 +130,7 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
-// Css pour les produits
-.prodAC{
-    color: #7D0A0A;
-    font-size: 1.3em;
-    margin-bottom: -2px;
-    margin-top: -3px;
-    font-family: 'Poppins', sans-serif;
-}
-.prodAC1{
-    width: 92%;
-    text-align: right;
-    position: absolute;
-    margin-top: -17px;
-    color: #7d0a0a96;
-}
-.produit{
-    position: relative;
-    margin-top: -10px;
-    margin: 0;
-    padding: 0;
-}
-.produit:hover {
-    //box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; /* Ajoute une ombre lors du survol */
-}
 
-.produit::before {
-    content: "";
-    position: absolute;
-    border-radius: 10px;
-    top: 10px;
-    left: 0;
-    width: 100%; 
-    height: 150px;
-    background-color: rgba(0, 0, 0, 0.197); /* Couleur foncée semi-transparente */
-    z-index: 1; /* Assure que la superposition est au-dessus de l'image */
-}
-.produit h3{
-    font-weight: bolder; 
-    font-family: 'Updock', cursive;
-    margin-left: 20px;
-    margin-top: 20px;
-    position: absolute; 
-    color: #F3EDC8;
-    font-size: 2em;
-    z-index: 2;
-}
-.produit h4{
-    font-weight: bolder; 
-    margin-left: 85%;
-    margin-top: 20px;
-    position: absolute; 
-    color: #F3EDC8;
-    font-size: 2em;
-    z-index: 2;
-}
-.produit img{
-    width: 100%; 
-    height: 150px;
-    object-fit: cover; 
-    margin-top: 10px; 
-    border-radius: 10px;
-}
-.produit p{
-    font-weight: bolder;
-    position: absolute;
-    text-align: left;
-    margin-top: -40px;
-    margin-left: 80%;
-    color: #EAD196;
-    font-size: 1em;
-    padding: 0;
-    z-index: 2;
-    
-}
-.produit h2 ion-icon{
-    width: 30px; 
-    height: 30px;
-    object-fit: cover;
-    position: absolute;
-    margin-top: -70px;
-    margin-left: 20px; 
-    color: #EAD196;
-    z-index: 2;
-}
 //Css pour le footer
 ion-footer{
     background:#ffffffe0;

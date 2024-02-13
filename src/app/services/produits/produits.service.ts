@@ -7,6 +7,7 @@ import { v4 as uuidv4 } from 'uuid';
 export interface produits {
   title:string, 
   description:string,
+  image:string,
   id?: string,
 }
 
@@ -24,22 +25,34 @@ export class ProduitsService {
     private firestore: Firestore,
   ) { }
 
-  async addProduits(data: produits){
-    try{
+  async addProduits(data: produits) {
+    if (data.title.trim() === '' || data.description.trim() === '' || data.image.trim() === '') {
+      throw new Error('Veuillez remplir tous les champs');
+    }
+    try {
       const dataRef: any = collection(this.firestore, 'produits');
       const response = await addDoc(dataRef, data);
       console.log(response);
       const id = await response?.id;
+
+      // Mettez à jour l'image dans le même document avec le même ID
+      await this.updateProduits(id, {
+        title: '',
+        description: '',
+        image: data.image,
+      });
+
       const currentProduits = this._produits.value;
-      const produitId = uuidv4(); // Utilisation de uuidv4 pour générer un id unique
+      const produitId = uuidv4();
       const produit: produits = { ...data, id };
       const updateProduits = [produit, ...currentProduits];
       this._produits.next(updateProduits);
       return updateProduits;
-    }catch(e){
-      throw(e);
+    } catch (e) {
+      throw (e);
     }
   }
+
 
   async getProduits(){
     try{
@@ -55,6 +68,7 @@ export class ProduitsService {
       return produit;
 
     }catch(e){
+      console.error('Une erreur s\'est produite lors de la récupération des produits :', e);
       throw(e);
     }
   }

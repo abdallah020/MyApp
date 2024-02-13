@@ -26,6 +26,7 @@ import { provideStorage, getStorage } from '@angular/fire/storage';
     CommonModule,
     FormsModule,
     provideFirebaseApp(() => initializeApp({"projectId":"fam-traiteur","appId":"1:977035262624:web:2d3ef86c4094a134ce27c5","storageBucket":"fam-traiteur.appspot.com","apiKey":"AIzaSyBcEczWrGQONyrI32oAJAZRBvkbbzjWBJM","authDomain":"fam-traiteur.firebaseapp.com","messagingSenderId":"977035262624","measurementId":"G-0T7YRJEX4B"})),
+    
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
