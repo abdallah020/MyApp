@@ -65,30 +65,11 @@
     height: 45px;
 }
 // Css pour les produits
-.prodAC{
-    color: #7D0A0A;
-    font-size: 2em;
-    text-align: center;
-    text-decoration: underline;
-    margin-bottom: -2px;
-    margin-top: -3px;
-    font-family: 'Poppins', sans-serif;
-}
-.prodAC1{
-    width: 92%;
-    text-align: right;
-    position: absolute;
-    margin-top: -17px;
-    color: #7d0a0a96;
-}
 .produit{
     position: relative;
     margin-top: -10px;
     margin: 0;
     padding: 0;
-}
-.produit:hover {
-    //box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; /* Ajoute une ombre lors du survol */
 }
 
 .produit::before {

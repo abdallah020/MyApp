@@ -9,8 +9,6 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
-<div >
-  <h2 class="prodAC">Mes produits</h2>
   <div class="produit" *ngFor="let produit of produits">
     <div *ngIf="produit.title || produit.description || produit.image">
       <h3>{{ produit.title }}</h3>
@@ -20,7 +18,6 @@
       <h2><ion-icon name="add-circle"></ion-icon></h2>
     </div>
   </div>
-</div>
 
 </ion-content>   
 <ion-footer [translucent]="true">

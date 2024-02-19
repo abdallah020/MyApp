@@ -116,7 +116,6 @@ export class ProduitsService {
       throw(e);
     }
   }
-
-
+  
 
 }

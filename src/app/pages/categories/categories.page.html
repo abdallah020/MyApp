@@ -60,6 +60,7 @@
         <form #f="ngForm">
 
           <ion-item>
+            <img *ngIf="addedImage" [src]="addedImage" />
             <ion-input 
               label="Title" 
               labelPlacement="stacked" 

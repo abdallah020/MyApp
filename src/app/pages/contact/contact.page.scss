@@ -1,0 +1,140 @@
+// Css pour la partie Accueil
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Updock&display=swap');
+.accueil{
+    text-align: center;
+    width: 100%;
+    height: 30%;
+    font-family: 'Poppins', sans-serif;
+}
+ion-content{
+    --background: #7D0A0A;
+}
+.accueil h1{
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.accueil h1 img{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+}
+
+
+//css Contenu
+.entier{
+    width: 100%;
+    background: #F3EDC8;
+    border-radius: 70px 70px 0 0;
+    padding-top: 5%;
+    bottom: 0;
+}
+
+.Contenu{
+    color: #7D0A0A;
+    font-size: 2em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+}
+.contact{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #EAD196;
+    border-radius: 100px;
+    border-right: 7px solid #7D0A0A;
+}
+.ico{
+    width: 20%;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    list-style: circle;
+    background-color: #7D0A0A;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.ico h2{
+    margin: 0;
+    padding: 0;
+}
+.ico ion-icon{
+    color: #F3EDC8;
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    
+}
+.cateText{
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    margin-left: 10px;
+    margin-right: 5px;
+    color: #7D0A0A;
+    font-family: 'Poppins', sans-serif;
+    border-left: 4px solid #F3EDC8;
+}
+.cateText h2{
+    font-weight: bolder;
+    margin-left: 10px;
+    margin-right: 5px;
+    padding: 0;
+    font-size: 1.2em;
+}
+.cateText p{
+    margin-left:10px;
+    margin-right: 5px;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sociaux{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.sociaux ion-icon{
+    color: #7D0A0A;
+    padding: 10px;
+    width: 35px;
+    height: 35px;
+}
+//Css pour le footer
+ion-footer{
+    background:#ffffffe0;
+    height: 85px;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    
+}
+
+.footer ion-icon{
+    text-decoration: none;
+    color: #7D0A0A;
+    width: 32px;
+    height: 32px;
+}
+
+.active {
+    /* Ajoutez ici le style que vous souhaitez appliquer au bouton actif */
+    color: blue; /* Exemple : change la couleur du texte en bleu */
+  }
+.item,
+.icon {
+    --background: transparent !important;
+    --padding-start: 0; /* Pour supprimer l'espacement à gauche */
+    --inner-padding-end: 0; 
+  }
+  ion-item {
+    --ion-item-end: unset !important;
+    --display:none;
+  }
+  

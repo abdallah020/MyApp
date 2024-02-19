@@ -14,7 +14,7 @@
   <div class="menu1">
     <div class="burger" *ngFor="let categorie of categories">
       <div *ngIf="categorie.title || categorie.description || categorie.image">
-        <a href=""><img [src]="categorie.image" alt=""></a>
+        <img [src]="categorie.image" alt="">
         <div class="cateText">
           <h2>{{ categorie.title }}</h2>
           <p>{{ categorie.description }}</p>
@@ -22,7 +22,6 @@
       </div>
     </div>
   </div>
-
 
   <div >
     <h2 class="prodAC">Mes produits</h2>
@@ -47,7 +46,7 @@
     <ion-item [routerLink]="['/contact']" [class.active]="activeButton === 'location'" (click)="setActiveButton('location')">
       <ion-icon name="call-outline"></ion-icon>
     </ion-item>
-    <ion-item [routerLink]="['/your-search-route']" [class.active]="activeButton === 'search'" (click)="setActiveButton('search')">
+    <ion-item [routerLink]="['/a-propos']" [class.active]="activeButton === 'search'" (click)="setActiveButton('search')">
       <ion-icon name="restaurant-outline"></ion-icon>
     </ion-item>
   </div>

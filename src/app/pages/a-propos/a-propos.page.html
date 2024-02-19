@@ -1,0 +1,42 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+      <div class="text">
+        <img src="./assets/images/Paella.jpg" alt="">
+        <h1>A propos de nous</h1>
+      </div>
+  </ion-header>
+  <div class="paragraphe ion-padding">
+    <p><b>FAM Traiteur </b>est une entreprise spécialisée dans la fourniture de services traiteur pour une variété d'événements et d'occasions spéciales. Quelque soit le genre et le type d’événement , nous nous engageons à offrir à nos clients une expérience culinaire exceptionnelle.</p>
+    <div class="text2">
+      <img src="./assets/images/brunch1.jpg" alt="">
+      <h3>Voici un aperçu de ce que nous offrons :</h3>
+    </div>
+    <ul>
+      <li><b>Cuisine de Qualité Supérieure :</b> Notre équipe de chefs talentueux et expérimentés travaille avec des ingrédients frais et de qualité pour créer des plats délicieux et raffinés qui raviront vos invités.</li><br>
+      <li><b>Menu Personnalisé : </b> Nous comprenons que chaque événement est unique, c'est pourquoi nous proposons des menus personnalisés adaptés à vos préférences, vos besoins alimentaires et le thème de votre événement.</li><br>
+      <li><b>Service Professionnel :</b> Notre équipe de service attentionnée et professionnelle veille à ce que votre événement se déroule sans accroc. Du service de buffet à la restauration à table, nous sommes là pour répondre à tous vos besoins.</li><br>
+      <li><b>Le respect des règles d'hygiène est fondamental :</b> Les locaux et les systèmes réfrigérés doivent être nettoyés tous les jours. Les préparateurs et les serveurs sont d'ailleurs contraints de porter chapeau et gants .</li>
+    </ul>
+    <div class="text2">
+      <img src="./assets/images/kibbi.jpg" alt="">
+      <h2>En sommes</h2>
+    </div>
+    <p></p>
+    <p>Que vous planifiiez un événement privé ou professionnel, nous sommes là pour vous offrir un service traiteur de première classe qui impressionnera vos invités et vous laissera des souvenirs inoubliables. FAM Traiteur, où la passion culinaire rencontre le service exceptionnel !</p>
+  </div>
+</ion-content>
+
+
+<ion-footer [translucent]="true">
+  <div class="footer">
+    <ion-item [routerLink]="['/home']">
+      <ion-icon name="home-outline"></ion-icon>
+    </ion-item>
+    <ion-item [routerLink]="['/contact']" >
+      <ion-icon name="call-outline"></ion-icon>
+    </ion-item>
+    <ion-item [routerLink]="['/a-propos']">
+      <ion-icon name="restaurant-outline"></ion-icon>
+    </ion-item>
+  </div>
+</ion-footer>

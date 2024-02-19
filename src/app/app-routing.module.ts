@@ -36,16 +36,20 @@ const routes: Routes = [
     loadChildren: () => import('./pages/categories/categories.module').then( m => m.CategoriesPageModule)
   },
   {
-    path: 'contact',
-    loadChildren: () => import('./pages/contact/contact.module').then( m => m.ContactPageModule)
-  },
-  {
     path: 'list-categories',
     loadChildren: () => import('./pages/list-categories/list-categories.module').then( m => m.ListCategoriesPageModule)
   },
   {
     path: 'list-produits',
     loadChildren: () => import('./pages/list-produits/list-produits.module').then( m => m.ListProduitsPageModule)
+  },
+  {
+    path: 'contact',
+    loadChildren: () => import('./pages/contact/contact.module').then( m => m.ContactPageModule)
+  },
+  {
+    path: 'a-propos',
+    loadChildren: () => import('./pages/a-propos/a-propos.module').then( m => m.AProposPageModule)
   },
 
 ];
